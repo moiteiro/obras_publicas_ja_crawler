@@ -19,10 +19,10 @@ public class MainApp
 	{
 		DatabaseVO dbvo = new DatabaseVO();
 		dbvo.setDriver("com.mysql.cj.jdbc.Driver");
-		dbvo.setUrl("jdbc:mysql://localhost:3306/obraspublicas?autoReconnectForPools=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
-		dbvo.setUser("root");
-		//dbvo.setUser("obraspublicas");
-		//dbvo.setPassword("obras@2016*");
+		dbvo.setUrl("jdbc:mysql://obraspublicasbd.codecrafting.net:3306/obraspublicas?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+		//dbvo.setUser("root");
+		dbvo.setUser("obraspublicas");
+		dbvo.setPassword("obras@2016*");
 		try
 		{
 			DatabaseUtil.setDataSource("ObrasPublicas", dbvo);

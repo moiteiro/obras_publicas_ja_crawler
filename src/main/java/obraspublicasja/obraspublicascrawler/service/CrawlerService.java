@@ -207,9 +207,9 @@ public class CrawlerService
 			else if(attr.toLowerCase().contains("situacão"))
 			{
 				String aux = nodeText.replaceFirst(attr, "").replaceAll("\\s+", " ").trim().toLowerCase();
-				if(aux.contains("em obra")) obraVO.setSituacao("em andamento");
-				else if(aux.contains("concl")) obraVO.setSituacao("concluída");
-				else if(aux.contains("contrato")) obraVO.setSituacao("em contratação");
+				if(aux.contains("concl")) obraVO.setSituacao("concluída");
+				else if(aux.contains("contrat")) obraVO.setSituacao("em contratação");
+				else if(aux.contains("em obra") || aux.contains("análise")) obraVO.setSituacao("em andamento");
 				else obraVO.setSituacao("atrasada");
 			}
 		}
